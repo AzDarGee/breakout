@@ -1,6 +1,7 @@
 class TopicsController < ApplicationController
   def index
-    @topics = Topic.all.order("created-at DESC")
+      @topic = Topic.new
+    @topics = Topic.all.order("created_at DESC")
   end
   def new
     @topic = Topic.new

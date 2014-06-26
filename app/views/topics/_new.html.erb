@@ -1,0 +1,4 @@
+<%= form_for @topic do |f| %>
+    <%= f.text_field "title", class: "form-control flat input-hg", placeholder: "Add Topic" %>
+    <%= f.submit "Add", class: "form-control btn-primary flat", type: "hidden" %>
+<% end %>
