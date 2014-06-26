@@ -8,16 +8,21 @@
 </head>
 <body>
   <div class="container">
-    <div class="right">
-      <h1><span class="overline-title">brea</span><span class="underline-title">KouT</span></h1>
-      <% if user_signed_in? %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-      <% end %>
-    </div>
 
-    <div class="logo-space"></div>
-    <br />
+      <div class="right">
+        <div class="logo-space">
+          <h1><span class="overline-title">brea</span><span class="underline-title">KouT</span></h1>
+        </div>
+      </div>
+      <br />
 
+      <div class="left log-out-font-size">
+        <% if user_signed_in? %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+        <% end %>
+      </div>
+
+      <br />
     <%= yield %>
 
   </div>

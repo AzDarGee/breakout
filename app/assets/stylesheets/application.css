@@ -26,16 +26,23 @@
   text-align: center;
 }
 
+.left {
+  text-align: left;
+}
+
 .right {
   text-align: right;
+  float: right;
 }
 
 .underline-title {
   text-decoration: underline;
+  color: white;
 }
 
 .overline-title {
   text-decoration: overline;
+  color: white;
 }
 
 .strikethrough-title {
@@ -43,13 +50,20 @@
 }
 
 .logo-space {
-  height: 100px;
+  height: 150px;
   background-color: #1ABC9C;
   border-radius: 10px;
+  display: table-cell;
+  vertical-align: middle;
+
 }
 
 .under-add {
   color: #1ABC9C;
   border-bottom: solid 2px #1ABC9C;
   width: 100%;
+}
+
+.log-out-font-size {
+  font-size: 45px;
 }

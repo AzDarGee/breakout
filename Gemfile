@@ -18,3 +18,4 @@ group :development do
 end
 gem "less-rails"
 gem "therubyracer"
+gem "socialization"
