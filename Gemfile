@@ -12,10 +12,16 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 gem 'devise'
-group :development do
-  gem 'guard-livereload', require: false
-  gem "rack-livereload"
-end
 gem "less-rails"
 gem "therubyracer"
 gem "socialization"
+
+group :development do
+  gem 'guard-livereload', require: false
+  gem "rack-livereload"
+  gem 'sqlite3'
+end
+group :production do
+     gem 'pg'
+     gem 'rails_12factor'
+end
