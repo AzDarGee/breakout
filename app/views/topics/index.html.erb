@@ -3,14 +3,21 @@
 </div>
 
 <% if user_signed_in? %>
-  <%= render 'new' %>
-
-  <%= @topics.each do |top| %>
-    <ol>
-      <li><%= top.title %></li>
-    </ol>
+  <%= form_for @topic do |f| %>
+    <%= f.text_field "title", class: "form-control flat input-hg", placeholder: "Add Topic" %>
+    <%= f.submit "Add", class: "form-control btn-primary flat", type: "hidden" %>
   <% end %>
+
+  <% @topics.each do |top| %>
+  <div class="container">
+    <label class="checkbox" for="checkbox1">
+      <input type="checkbox" value="" id="checkbox1" data-toggle="checkbox"><%= top.title %>
+    </label>
+  </div>
+  <% end %>
+
 <% else %>
+
   <%= link_to "Sign Up", new_user_registration_path %>
   <%= link_to "Log in", new_user_session_path %>
 <% end %>

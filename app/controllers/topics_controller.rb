@@ -1,10 +1,10 @@
 class TopicsController < ApplicationController
   def index
-      @topic = Topic.new
+    @topic = Topic.new
     @topics = Topic.all.order("created_at DESC")
   end
   def new
-    @topic = Topic.new
+    # @topic = Topic.new
   end
   def edit
     @topic = Topic.find(params[:id])
