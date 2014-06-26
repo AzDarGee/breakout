@@ -11,3 +11,12 @@
 #     $('')
 #   )
 # )
+
+
+# $(document).on("ready page:load", ->
+#   $('#checkbox').click(function(){
+#       if ($('#checkbox').attr('checked')) {
+#           SOME FUNCTION
+#       }
+#   })
+# )

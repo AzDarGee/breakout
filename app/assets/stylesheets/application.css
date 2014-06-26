@@ -56,14 +56,11 @@
 }
 
 .logo-space {
-  height: 160px;
+
   background-color: #1ABC9C;
   border-radius: 10px;
   display: table-cell;
   vertical-align: middle;
-  width: 40%;
-
-
 }
 
 .under-add {
@@ -82,4 +79,8 @@
 
 .space {
   padding-right: 50px;
+}
+
+.underline {
+  text-decoration: underline;
 }
