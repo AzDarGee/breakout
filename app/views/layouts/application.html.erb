@@ -18,7 +18,8 @@
 
     <div class="left">
       <% if user_signed_in? %>
-        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "log-out-font-size" %>
+        <%= link_to current_user.name, "#", class: "log-out-font-size" %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
         <br /> <br /> <br />
         <%= form_for @topic do |f| %>
           <%= f.text_field "title", class: "form-control flat input-hg font-size-add-topics", placeholder: "Add Topic", autofocus: true %>
