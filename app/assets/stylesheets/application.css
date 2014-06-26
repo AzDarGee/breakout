@@ -15,7 +15,7 @@
  */
 
 .background-color {
-  /*background-color: #34495e;*/
+  background-color: #34495e;
 
 }
 
@@ -43,7 +43,7 @@
 
 .underline-title {
   text-decoration: underline;
-  color: white;
+  color: #34495e;
 }
 
 .overline-title {
@@ -83,4 +83,8 @@
 
 .underline {
   text-decoration: underline;
+}
+
+.panel-heading {
+  background-color: #7f8c8d;
 }
