@@ -9,12 +9,7 @@
 <body class="background-color">
   <div class="container-fluid">
 
-    <div class="right">
-      <div class="logo-space">
-        <h1><span class="overline-title">brea</span><span class="underline-title">KouT</span></h1>
-      </div>
-    </div>
-
+    <%= link_to render(:partial=>'layouts/logo'), root_path %>
 
     <div class="left">
       <% if user_signed_in? %>
