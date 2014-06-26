@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140626043203) do
+ActiveRecord::Schema.define(version: 20140626050321) do
 
   create_table "follows", force: true do |t|
     t.string   "follower_type"
@@ -51,7 +51,10 @@ ActiveRecord::Schema.define(version: 20140626043203) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
+
+  add_index "topics", ["user_id"], name: "index_topics_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
