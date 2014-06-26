@@ -5,13 +5,13 @@ class TopicsController < ApplicationController
     @topics = Topic.all.order("created_at DESC")
   end
   def new
-    # @topic = Topic.new
+    # @topic = current_user.topics.build
   end
   def edit
     @topic = Topic.find(params[:id])
   end
   def create
-    @topic = Topic.new(topic_params)
+    @topic = current_user.topics.build(topic_params)
     if @topic.save
       redirect_to topics_path, :notice => "Topic created!"
     else
