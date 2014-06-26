@@ -14,8 +14,14 @@
  *= require_self
  */
 
+.background-color {
+  /*background-color: #34495e;*/
+
+}
+
 .font-size-topics {
   font-size: 16px;
+  color: #95a5a6;
 }
 
 .font-size-add-topics {
@@ -50,11 +56,13 @@
 }
 
 .logo-space {
-  height: 150px;
+  height: 160px;
   background-color: #1ABC9C;
   border-radius: 10px;
   display: table-cell;
   vertical-align: middle;
+  width: 40%;
+
 
 }
 
@@ -66,4 +74,8 @@
 
 .log-out-font-size {
   font-size: 45px;
+}
+
+.container-fluid {
+  overflow: auto;
 }

@@ -6,8 +6,8 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-  <div class="container">
+<body class="background-color">
+  <div class="container-fluid">
 
       <div class="right">
         <div class="logo-space">
@@ -16,13 +16,19 @@
       </div>
       <br />
 
-      <div class="left log-out-font-size">
+      <div class="left">
         <% if user_signed_in? %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "log-out-font-size" %>
         <% end %>
       </div>
 
       <br />
+      <%= form_for @topic do |f| %>
+        <%= f.text_field "title", class: "form-control flat input-hg font-size-add-topics", placeholder: "Add Topic", autofocus: true %>
+        <%= f.submit "Add", class: "form-control btn-primary flat", type: "hidden" %>
+      <% end %>
+
+    <br />
     <%= yield %>
 
   </div>
