@@ -22,5 +22,8 @@ module Breakout
 
     #required for heroku
     config.assets.initialize_on_precompile = false
+
+    #to get glyphicons working on heroku
+    config.assets.paths << "#{Rails}/vendor/assets/fonts"
   end
 end
