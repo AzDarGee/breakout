@@ -1,15 +1,13 @@
+<% if user_signed_in? %>
+  <%= form_for @topic do |f| %>
+    <%= f.text_field "title", class: "form-control flat input-hg font-size-add-topics", placeholder: "Add Topic" %>
+    <%= f.submit "Add", class: "form-control btn-primary flat", type: "hidden" %>
+  <% end %>
 
+  <br />
+  <div class="under-add">Topics</div>
 
-  <% if user_signed_in? %>
-    <%= form_for @topic do |f| %>
-      <%= f.text_field "title", class: "form-control flat input-hg font-size-add-topics", placeholder: "Add Topic" %>
-      <%= f.submit "Add", class: "form-control btn-primary flat", type: "hidden" %>
-    <% end %>
-
-
-    <p >+++++++++++++++++++++++++++++++++++++++++++++++++</p>
-
-    <% @topics.each do |top| %>
+  <% @topics.each do |top| %>
     <div class="container">
       <label class="checkbox font-size-topics" for="checkbox1">
         <input type="checkbox" value="2" id="checkbox1" data-toggle="checkbox"><%= top.title %>
@@ -19,6 +17,6 @@
 
 <% else %>
 
-  <%= link_to "Sign Up", new_user_registration_path %>
-  <%= link_to "Log in", new_user_session_path %>
+<%= link_to "Sign Up", new_user_registration_path %>
+<%= link_to "Log in", new_user_session_path %>
 <% end %>
