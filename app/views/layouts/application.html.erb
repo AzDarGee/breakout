@@ -7,17 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
   <div class="container">
-    <% flash.each do |name,msg| %>
-      <%= content_tag(:div,msg, class: "alert alert-#{name}") %>
-    <% end %>
+    <div class="center">
+      <h1><span class="overline-title">brea</span><span class="underline-title">KouT</span></h1>
+      <% if user_signed_in? %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+      <% end %>
+    </div>
 
-    <% if user_signed_in? %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-    <% end %>
+    <div class="logo-space"></div>
 
     <%= yield %>
+
   </div>
 
 </body>

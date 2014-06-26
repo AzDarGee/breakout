@@ -13,3 +13,31 @@
  *= require_tree .
  *= require_self
  */
+
+.font-size-topics {
+  font-size: 16px;
+}
+
+.font-size-add-topics {
+  font-size: 40px;
+}
+
+.center {
+  text-align: right;
+}
+
+.underline-title {
+  text-decoration: underline;
+}
+
+.overline-title {
+  text-decoration: overline;
+}
+
+.strikethrough-title {
+  text-decoration: line-through;
+}
+
+.logo-space {
+  height: 100px;
+}
