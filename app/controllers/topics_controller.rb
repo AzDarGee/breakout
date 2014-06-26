@@ -1,7 +1,12 @@
 class TopicsController < ApplicationController
   def index
     #building a pin through a user --> therefore the userId will be set on every topic made
-    @topic = current_user.topics.build
+    if user_signed_in?
+      @topic = current_user.topics.build
+    else
+      @topic = Topic.new
+    end
+
     @topics = Topic.all.order("created_at DESC")
   end
   def new

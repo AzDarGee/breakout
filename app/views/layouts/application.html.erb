@@ -9,26 +9,29 @@
 <body class="background-color">
   <div class="container-fluid">
 
-      <div class="right">
-        <div class="logo-space">
-          <h1><span class="overline-title">brea</span><span class="underline-title">KouT</span></h1>
-        </div>
+    <div class="right">
+      <div class="logo-space">
+        <h1><span class="overline-title">brea</span><span class="underline-title">KouT</span></h1>
       </div>
-      <br />
+    </div>
+    <br />
 
-      <div class="left">
-        <% if user_signed_in? %>
-          <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "log-out-font-size" %>
+    <div class="left">
+      <% if user_signed_in? %>
+        <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "log-out-font-size" %>
+        <br />
+        <%= form_for @topic do |f| %>
+          <%= f.text_field "title", class: "form-control flat input-hg font-size-add-topics", placeholder: "Add Topic", autofocus: true %>
+          <%= f.submit "Add", class: "form-control btn-primary flat", type: "hidden" %>
         <% end %>
-      </div>
-
-      <br />
-      <%= form_for @topic do |f| %>
-        <%= f.text_field "title", class: "form-control flat input-hg font-size-add-topics", placeholder: "Add Topic", autofocus: true %>
-        <%= f.submit "Add", class: "form-control btn-primary flat", type: "hidden" %>
+      <% else %>
+        <%= link_to "Sign Up", new_user_registration_path, class: "log-out-font-size space" %>
+        <%= link_to "Log in", new_user_session_path, class: "log-out-font-size" %>
       <% end %>
+    </div>
 
     <br />
+
     <%= yield %>
 
   </div>

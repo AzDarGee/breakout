@@ -79,3 +79,7 @@
 .container-fluid {
   overflow: auto;
 }
+
+.space {
+  padding-right: 50px;
+}

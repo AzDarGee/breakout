@@ -1,7 +1,5 @@
-
 <% if user_signed_in? %>
   <div class="under-add">Topics</div>
-
   <% @topics.each do |top| %>
     <div class="container-fluid">
       <label class="checkbox font-size-topics" for="checkbox1">
@@ -14,9 +12,4 @@
       </label>
     </div>
   <% end %>
-
-<% else %>
-
-<%= link_to "Sign Up", new_user_registration_path %>
-<%= link_to "Log in", new_user_session_path %>
 <% end %>
