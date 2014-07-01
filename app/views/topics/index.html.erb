@@ -4,11 +4,11 @@
     <%= f.submit "Add", class: "form-control btn-primary flat", type: "hidden" %>
   <% end %>
   <br />
-  <div class="under-add">Topics</div>
+  <div class="topic-title">Topics</div>
   <% @topics.each do |top| %>
     <div class="container-fluid">
       <label class="checkbox font-size-topics" for="checkbox1">
-        <input type="checkbox" value="2" id="checkbox1" data-toggle="checkbox"><%= top.title %> <strong><em>by</em></strong> <%= top.user.name %>
+        <input type="checkbox" value="2" id="checkbox1" data-toggle="checkbox"><span class="specific-topic-title"><%= top.title %></span> <strong><em>by</em></strong> <%= top.user.name %>
         <% if current_user && (top.user == current_user) %>
           <span class="right">
             <%= link_to top, method: :delete, data: { confirm: 'Are you sure?' } do %>
