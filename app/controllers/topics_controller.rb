@@ -34,6 +34,10 @@ class TopicsController < ApplicationController
   def show
     @topic = Topic.find(params[:id])
   end
+  def like
+    @topic = Topic.find(params[:id])
+    current_user.toggle_like!(@topic)
+  end
   def destroy
     @topic = Topic.find(params[:id])
     @topic.destroy
