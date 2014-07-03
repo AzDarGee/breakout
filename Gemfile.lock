@@ -29,6 +29,9 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.7)
+    better_errors (1.1.0)
+      coderay (>= 1.0.0)
+      erubis (>= 2.6.6)
     builder (3.2.2)
     celluloid (0.15.2)
       timers (~> 1.1.0)
@@ -100,6 +103,8 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
+    pry-rails (0.3.2)
+      pry (>= 0.9.10)
     rack (1.5.2)
     rack-livereload (0.3.15)
       rack
@@ -179,6 +184,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  better_errors
   coffee-rails (~> 4.0.0)
   devise
   guard-livereload
@@ -186,6 +192,7 @@ DEPENDENCIES
   jquery-rails
   less-rails
   pg
+  pry-rails
   rack-livereload
   rails (= 4.1.1)
   rails_12factor

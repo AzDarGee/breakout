@@ -2,21 +2,12 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+initialize = ->
+	$('#checkbox1').on('toggle', ->
+		# $.post('/topics/2/like').then((data) ->
+		#   # do stuff with the data returned from the POST
+		# )
+		
+	)
 
-# $(document).on("ready page:load", ->
-#   $(":checkbox").on("click", (event) ->
-#     selection = $(@)
-#     $("#user-type-status").text(selection.text())
-#     $("#new-user-form").attr("action", selection.data("toggle"))
-#     $('')
-#   )
-# )
-
-
-# $(document).on("ready page:load", ->
-#   $('#checkbox').click(function(){
-#       if ($('#checkbox').attr('checked')) {
-#           SOME FUNCTION
-#       }
-#   })
-# )
+$(document).on('ready page:load', initialize)
