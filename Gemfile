@@ -14,11 +14,13 @@ gem 'devise'
 gem "less-rails"
 gem "therubyracer"
 gem "socialization"
+gem "binding_of_caller"
 
 group :development do
   gem 'guard-livereload', require: false
   gem "rack-livereload"
   gem 'sqlite3'
+  gem "better_errors"
 end
 group :production do
      gem 'pg'
