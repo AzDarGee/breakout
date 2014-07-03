@@ -63,10 +63,11 @@
   vertical-align: middle;
 }
 
-.under-add {
+.topic-title {
   color: #1ABC9C;
   border-bottom: solid 2px #1ABC9C;
   width: 100%;
+  font-size: 55px;
 }
 
 .log-out-font-size {
@@ -83,4 +84,8 @@
 
 .underline {
   text-decoration: underline;
+}
+
+.specific-topic-title {
+  font-size: 35px;
 }

@@ -13,6 +13,8 @@ gem "less-rails"
 gem "therubyracer"
 gem "socialization"
 gem 'pry-rails'
+gem "binding_of_caller"
+
 group :development do
   gem 'guard-livereload', require: false
   gem "rack-livereload"
@@ -20,6 +22,7 @@ group :development do
   gem 'better_errors'
   gem 'spring'
 end
+
 group :production do
      gem 'pg'
      gem 'rails_12factor'
