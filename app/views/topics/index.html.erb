@@ -1,23 +1,15 @@
 <% if user_signed_in? %>
-  <%= form_for @topic do |f| %>
+  <%= form_for @topic, id: "add-topics-form" do |f| %>
     <%= f.text_field "title", class: "form-control flat input-hg font-size-add-topics", id: "add-topics", placeholder: "Add Topic", autofocus: true %>
     <%= f.submit "Add", class: "form-control btn-primary flat", type: "hidden" %>
   <% end %>
   <br />
-<<<<<<< HEAD
-  <div class="under-add">Topics</div>
-  
-  <% @topics.each do |top| %>
-    <div class="container-fluid">
-      <label class="checkbox font-size-topics" for="checkbox1">
-        <input name="checkbox1" type="checkbox" value="0" id="checkbox1" data-toggle="checkbox"><%= top.title %> <strong><em>by</em></strong> <%= top.user.name %>
-=======
+
   <div class="topic-title">Topics</div>
   <% @topics.each do |top| %>
     <div class="container-fluid">
-      <label class="checkbox font-size-topics" for="checkbox1" name="message">
-        <input type="checkbox" value="2" id="checkbox1" data-toggle="checkbox"><span class="specific-topic-title" id="list-topics"><%= top.title %></span> <strong><em>by</em></strong> <%= top.user.name %>
->>>>>>> 161fcd7e0a93ee810d6a5649ea39f579af468502
+      <label class="checkbox font-size-topics" for="checkbox1">
+        <input type="checkbox" value="" id="checkbox-<%= top.id %>" data-toggle="checkbox"><span class="specific-topic-title" id="list-topics"><%= top.title %></span> <strong><em>by</em></strong> <%= top.user.name %>
         <% if current_user && (top.user == current_user) %>
           <span class="right">
             <%= link_to top, method: :delete, data: { confirm: 'Are you sure?' } do %>
@@ -28,15 +20,15 @@
       </label>
     </div>
   <% end %>
-
-
-  <%= form_tag do %>
-
-  <% end %>
 <% end %>
+<p class="font-size-topics"></p>
+
 
 <script>
   $(document).ready(function() {
+    $('#add-topics-form').submit(function(event) {
+      event.preventDefault();
+    });
     $('#add-topics').keypress(function(e) {
       if(e.which == 13) {
         var toAdd = $("#add-topics").val();
@@ -44,4 +36,13 @@
       };
     });
 });
+</script>
+
+<script>
+  $(document).ready(function() {
+    var $input = $('#checkbox-10');
+    $input.on('toggle',function() {
+      $('p').replaceWith("<p class='font-size-topics'>CHECKED!</p>");
+    });
+  });
 </script>
