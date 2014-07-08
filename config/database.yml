@@ -24,3 +24,4 @@ production:
   adapter: postgresql
   database: breakout
   host: localhost
+  encoding: unicode
