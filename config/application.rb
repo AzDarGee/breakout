@@ -20,9 +20,6 @@ module Breakout
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
 
-    #required for heroku
-    config.assets.initialize_on_precompile = false
-
 
   end
 end
