@@ -81,7 +81,5 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.assets.precompile += %w( *.js *.css *.eot *.woff *.ttf *.svg )
-
   config.action_mailer.default_url_options = { host: 'breakout-sesh.herokuapp.com' }
 end

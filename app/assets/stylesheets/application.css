@@ -39,6 +39,7 @@
 .right {
   text-align: right;
   float: right;
+  padding-right: 30px;
 }
 
 .underline-title {
